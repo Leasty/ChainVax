@@ -5,7 +5,7 @@
 
 ---
 
-![covid_spread](./readme_images/covid_spread5x.gif)
+<img src="./readme_images/covid_spread5x.gif" alt="covid_spread" width="50%"/>
 
 COVID19 data was collected from https://data.nsw.gov.au/nsw-covid-19-data.
 
