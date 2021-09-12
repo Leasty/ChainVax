@@ -1,9 +1,21 @@
 # ChainVax
 
+![chainvax](readme_images/chainvax.png)
 
-## Analyse Covid_Infeciton Rate ##
+## Introduction: 
+
+
+
+## Objectives:
+
+- Analyse Covid-Infection Rate 
+- Simulate future Covid-Infections
+- Build smart contract for Vax Records
+- Generate Vax Digital Certificate & QR Code  
 
 ---
+## Analyse Covid Infeciton Rate:
+
 
 <img src="./readme_images/covid_spread5x.gif" alt="covid_spread" width="50%"/>
 
@@ -20,17 +32,81 @@ Plot the data on a mapping of NSW using the longitutde and latitude data to show
 
 ---
 
-## Solidity ##
+## Implementing a ChainVax certificate:
 
-To finalise our ChainVax process onto the blockchain, we incorporated a Solidity Contract using the Remix IDE.
+![Vax_implementation](readme_images/Vax_implementation.png)
 
-The ChainVax contract runs on version 0.5.5 and inherits from the ERC721Full and Counters contract. 
-There is a struct for variables we require from the patient followed by a registerVaccination function. 
-The function contains a few uses such as token id increasing by 1 every time a new person gets vaccinated, minting the non-fungible token with the variable input and transferring that NFT to the wallet address of the person who got vaccinated.
-The team chose to keep it simple with only one function encompassing the entire use cases mentioned above to minimise interaction between the Python script and Solidity to reduce potential mistakes. 
-When the contract is deployed, there are a few settings to be updated in the python script before the ChainVax blockchain can be utilised. 
-Firstly, the ABI will have to be updated in the JSON file. 
-Next, the newly deployed contract address also needs to be changed in the top of our python script variables. 
-Finally, please ensure that the operator address for the entire ChainVax procedure remains constant as the ChainVax contract requires the owner’s address to operate.
-Besides the registerVaccination function mentioned, the other function heavily used is called totalSupply and these two remain the most important function for our project. 
-The totalSupply function is vital to ensuring our minting records are updated properly as we are using the python script to extract the token id information from the ChainVax contract using the totalSupply function which contains the total index length of tokens in the contract that has been minted.
+
+## Solidity - Contract - Deploying the NFT:
+
+- To finalise our ChainVax process onto the blockchain, we incorporated a Solidity Contract using the Remix IDE.
+
+- The ChainVax contract runs on version 0.5.5 and inherits from the ERC721Full and Counters contract. 
+
+- There is a struct for variables we require from the patient followed by a registerVaccination function. 
+
+- The function contains a few uses such as token id increasing by 1 every time a new person gets vaccinated, minting the non-fungible token with the variable input and transferring that NFT to the wallet address of the person who got vaccinated.
+
+- The team chose to keep it simple with only one function encompassing the entire use cases mentioned above to minimise interaction between the Python script and Solidity to reduce potential mistakes. 
+
+- When the contract is deployed, there are a few settings to be updated in the python script before the ChainVax blockchain can be utilised. 
+
+- Firstly, the ABI will have to be updated in the JSON file. 
+
+- Next, the newly deployed contract address also needs to be changed in the top of our python script variables. 
+
+- Finally, please ensure that the operator address for the entire ChainVax procedure remains constant as the ChainVax contract requires the owner’s address to operate.
+
+- Besides the registerVaccination function mentioned, the other function heavily used is called totalSupply and these two remain the most important function for our project. 
+
+- The totalSupply function is vital to ensuring our minting records are updated properly as we are using the python script to extract the token id information from the ChainVax contract using the totalSupply function which contains the total index length of tokens in the contract that has been minted.
+
+
+![deployedcontract](readme_images/deployedcontract.png)
+
+
+## Converting Variables and Cert into URI for Solidity:
+
+![functionhere](readme_images/functionhere.png)
+
+
+
+## Generation of Covid Certificate:
+
+On this project we have used a new library called OpenCV
+
+![opencv](readme_images/opencv.png)
+
+Is a huge open-source library for computer vision, machine learning, and image processing. It can process images and videos to identify objects, faces, or even the handwriting of a human. When it integrated with various libraries, such as NumPy, python is capable of processing the OpenCV array structure for analysis. To Identify image pattern and its various features and perform mathematical operations on these features. 
+
+As you can see on the image below, this temple was created through an external designing application, then we read the image using OpenCV library and given the parameters needed for the Vax Certifica… such as name, dob, valid from, Doc num & vaccinations, in other to do that we provided some coordinates to our function so it can display all different texts on the exact location anytime when a certificate is created...
+
+![VaxCertiTemple](VaxCertiTemple.png)
+
+## Generation of QR Code:
+
+![qrcode](readme_images/qrcode.png)
+
+Qrcode is a two-dimensional pictographic code used for its fast readability and comparatively large storage capacity. 
+
+We used this new library within Python to store our Vaccination Certificate once the URI has been sent from pinata… 
+
+Some of the parameters used to define the QR Code were:
+
+- Box Size = Parameter that controls how many pixels each “box” of the QR code is
+- Border = Parameter that controls how many boxes thick the border should be
+- Version = 1
+- Fill Colour
+- Back Colour
+- Add data = URI link
+- Make and save it
+
+## Vaccination Certificate QrCode:
+
+![QR_VaxCert](QR_VaxCert.png)
+
+
+## Vaccination Certificate:
+
+![VaxCert2](VaxCert2.png)
+
