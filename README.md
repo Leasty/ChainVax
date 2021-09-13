@@ -31,6 +31,17 @@ Plot the data on a mapping of NSW using the longitutde and latitude data to show
 ![covid_map](./readme_images/covid_map_interact.gif)
 
 ---
+## Projection of Future Daily Cases:
+
+
+![14_day_projection](./readme_images/.gif)
+
+
+
+![30_day_projection](./readme_images/covid_map_interact.gif)
+
+
+---
 
 ## Implementing a ChainVax certificate:
 
