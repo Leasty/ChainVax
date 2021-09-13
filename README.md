@@ -64,35 +64,19 @@ The ChainVax team set out to achieve a seamless way to ensure your vaccination d
 
 ## Solidity - Contract - Deploying the NFT:
 
-- To finalise our ChainVax process onto the blockchain, we incorporated a Solidity Contract using the Remix IDE.
+To finalise our ChainVax process onto the blockchain, we incorporated a Solidity Contract using the Remix IDE.
+The ChainVax contract runs on version 0.5.5 and inherits from the ERC721Full and Counters contract. There is a struct for variables we require from the patient followed by a registerVaccination function. The function contains a few uses such as token id increasing by 1 every time a new person gets vaccinated, minting the non-fungible token with the variable input and transferring that NFT to the wallet address of the person who got vaccinated.
 
-- The ChainVax contract runs on version 0.5.5 and inherits from the ERC721Full and Counters contract. 
+The team chose to keep it simple with only one function encompassing the entire use cases mentioned above to minimise interaction between the Python script and Solidity to reduce potential mistakes. When the contract is deployed, there are a few settings to be updated in the python script before the ChainVax blockchain can be utilised. Firstly, the ABI will have to be updated in the JSON file. The newly deployed contract address also needs to be changed in the top of our python script variables. Finally, please ensure that the operator address for the entire ChainVax procedure remains constant as the ChainVax contract requires the owner’s address to operate.
 
-- There is a struct for variables we require from the patient followed by a registerVaccination function. 
+Besides the registerVaccination function mentioned, the other function heavily used is called totalSupply and these two remain the most important function for our project. The totalSupply function is vital to ensuring our minting records are updated properly as we are using the python script to extract the token id information from the ChainVax contract using the totalSupply function which contains the total index length of tokens in the contract that has been minted.
 
-- The function contains a few uses such as token id increasing by 1 every time a new person gets vaccinated, minting the non-fungible token with the variable input and transferring that NFT to the wallet address of the person who got vaccinated.
-
-- The team chose to keep it simple with only one function encompassing the entire use cases mentioned above to minimise interaction between the Python script and Solidity to reduce potential mistakes. 
-
-- When the contract is deployed, there are a few settings to be updated in the python script before the ChainVax blockchain can be utilised. 
-
-- Firstly, the ABI will have to be updated in the JSON file. 
-
-- Next, the newly deployed contract address also needs to be changed in the top of our python script variables. 
-
-- Finally, please ensure that the operator address for the entire ChainVax procedure remains constant as the ChainVax contract requires the owner’s address to operate.
-
-- Besides the registerVaccination function mentioned, the other function heavily used is called totalSupply and these two remain the most important function for our project. 
-
-- The totalSupply function is vital to ensuring our minting records are updated properly as we are using the python script to extract the token id information from the ChainVax contract using the totalSupply function which contains the total index length of tokens in the contract that has been minted.
-
-
-![deployedcontract](readme_images/deployedcontract.png)
+![soliditysnapshot](readme_images/soliditysnapshot.png)
 
 
 ## Converting Variables and Cert into URI for Solidity:
 
-![functionhere](readme_images/functionhere.png)
+![registerVaccineDose](readme_images/registerVaccineDose.png)
 
 
 
