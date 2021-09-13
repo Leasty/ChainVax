@@ -33,13 +33,27 @@ Plot the data on a mapping of NSW using the longitutde and latitude data to show
 ---
 ## Projection of Future Daily Cases:
 
+To understand the likely projection of Daily Covid cases we developed a two main scenarios 1) Projection of Covid Cases across the next 14 days and 2) Projection of Covid Cases across 30 days. 
 
-![14_day_projection](./readme_images/.gif)
+To do this, we adopted a Monte Carlo simulation and ran 20 simulations across both options to understand how serious Covid Cases would grow. We used both the standard deviation and mean from the last 14 days of actual data to make these projections. 
+
+The results were surprising and illustrated some diar worst case scenarios. 
 
 
 
-![30_day_projection](./readme_images/covid_map_interact.gif)
+![14_day_projection](./readme_images/MC_14_days.png)
 
+Daily cases if left with the same trajectory as the last 14 days of actual data, our Monte Carlo simulations suggested that in 14 days, maxim daily cases could reach 2,927 cases per day. 
+
+
+![30_day_projection](./readme_images/MC_30_days.png)
+
+
+The 30 day scenario projected a potential maxim daily cases of 11,908 cases per day.
+
+Whilst these are the worst case scenarios, these illustrated the dangers of leaving Covid-19 uncontrolled. 
+
+The ChainVax team set out to achieve a seamless way to ensure your vaccination data is kept safe and easily accessible when required to provide details of your vaccination. Using the benefits of BlockChain technology, we set out to digitise Vaccination records. 
 
 ---
 
