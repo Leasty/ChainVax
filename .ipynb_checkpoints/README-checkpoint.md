@@ -122,10 +122,10 @@ Some of the parameters used to define the QR Code were:
 
 ## Vaccination Certificate QrCode:
 
-![QR_VaxCert](QR_VaxCert.png)
+![QR_VaxCert](images/QR_VaxCert.png)
 
 
 ## Vaccination Certificate:
 
-![VaxCert2](VaxCert2.png)
+![VaxCert2](images/VaxCert2.png)
 
