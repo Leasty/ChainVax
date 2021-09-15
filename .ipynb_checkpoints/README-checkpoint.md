@@ -4,7 +4,11 @@
 
 ## Introduction: 
 
+Based on the current trend of COVID cases across NSW, vaccination is becoming critical in controlling the outbreak.
 
+With vaccination, there will be a need for providing doccumentation for future activities such as travel, events and social gatherings.
+
+This repo demonstrates a blockchain solution that is immutable, secure and trustless.
 
 ## Objectives:
 
@@ -12,6 +16,12 @@
 - Simulate future Covid-Infections
 - Build smart contract for Vax Records
 - Generate Vax Digital Certificate & QR Code  
+
+## Software Requirements
+
+ - Python, imports for this project include requests, json, os, datetime, web3, cv2, openpyx1, qrcode, dotenv, pathlib, pprint.
+ - Solidity, imporst include Counters and ERC721 sol
+ - Pinata, our URI coordinator program
 
 ---
 ## Analyse Covid Infeciton Rate:

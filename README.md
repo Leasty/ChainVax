@@ -17,6 +17,12 @@ This repo demonstrates a blockchain solution that is immutable, secure and trust
 - Build smart contract for Vax Records
 - Generate Vax Digital Certificate & QR Code  
 
+## Software Requirements
+
+ - Python, imports for this project include requests, json, os, datetime, web3, cv2, openpyx1, qrcode, dotenv, pathlib, pprint.
+ - Solidity, imporst include Counters and ERC721 sol
+ - Pinata, our URI coordinator program
+
 ---
 ## Analyse Covid Infeciton Rate:
 
