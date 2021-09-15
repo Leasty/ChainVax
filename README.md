@@ -4,7 +4,11 @@
 
 ## Introduction: 
 
+Based on the current trend of COVID cases across NSW, vaccination is critical in controlling the outbreak.
 
+With vaccination there will be a need for providing doccumentation for future activities such as travel, events and social gathering.
+
+This repo demonstrates a blockchain solution that is immutable, secure and trustless.
 
 ## Objectives:
 
